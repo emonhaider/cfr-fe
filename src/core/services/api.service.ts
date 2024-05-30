@@ -1,6 +1,8 @@
 import { CFRItem, FileSignedUrl } from "../model/cfr-item";
 
-const baseUrl = 'http://localhost:3000';
+// TODO: Read from env using Vite 
+// const baseUrl = 'http://localhost:3000';
+const baseUrl = 'https://k6gwuu18d0.execute-api.us-east-1.amazonaws.com/prod';
 
 export async function getDownloadSignedUrl(): Promise<FileSignedUrl> {
   const url = new URL(`${baseUrl}/cfr/actions/get-download-signed-url`);
