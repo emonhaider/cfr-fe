@@ -8,3 +8,9 @@ export interface CFRItem {
   data?: string;
   ignore: boolean;
 }
+
+export interface fileSignedUrl {
+  key: string;
+  url: string;
+  extension: string;
+}

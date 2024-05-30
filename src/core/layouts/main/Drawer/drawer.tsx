@@ -4,6 +4,7 @@ import React from "react";
 import { Divider, IconButton, List, ListItemButton, ListItemIcon, ListItemText, Toolbar } from "@mui/material";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import HomeIcon from "@mui/icons-material/Home";
+import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import { useNavigate } from "react-router-dom";
 
 const drawerWidth: number = 240;
@@ -60,6 +61,12 @@ export default function Drawer({ open, toggleDrawer }: { open?: boolean; toggleD
           </ListItemButton>
 
           <Divider sx={{ my: 1 }} />
+          <ListItemButton onClick={() => navigate("/file")}>
+            <ListItemIcon>
+              <FileDownloadIcon />
+            </ListItemIcon>
+            <ListItemText primary="Download" />
+          </ListItemButton>
         </List>
       </StyledDrawer>
     </React.Fragment>
