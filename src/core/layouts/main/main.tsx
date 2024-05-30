@@ -9,14 +9,25 @@ import React from "react";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function Copyright(props: any & { pt: number }) {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {"Copyright © "}
-      <Link color="inherit" href="https://www.linkedin.com/in/habibhaider/">
-        Habib Haider
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
+    <>
+      <Typography variant="body2" color="text.secondary" align="center" {...props}>
+        {"Copyright © "}
+        <Link color="inherit" href="https://www.linkedin.com/in/habibhaider/">
+          Habib Haider
+        </Link>{" "}
+        {new Date().getFullYear()}
+        {"."}
+      </Typography>
+      <Typography variant="body2" color="text.secondary" align="center" {...props}>
+        {"Template Source: "}
+        <Link
+          color="inherit"
+          href="https://github.com/mui/material-ui/tree/v5.15.18/docs/data/material/getting-started/templates/dashboard"
+        >
+          MUI Dashboard
+        </Link>
+      </Typography>
+    </>
   );
 }
 
